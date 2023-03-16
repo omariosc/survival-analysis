@@ -11,36 +11,38 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import torch
-import numbers
-import warnings
+# import numbers
+# import warnings
 
 import numpy
-from scipy.linalg import solve
-from sklearn.base import BaseEstimator
-from sklearn.exceptions import ConvergenceWarning
-from sklearn.utils.validation import check_array, check_is_fitted
+# from scipy.linalg import solve
+# from sklearn.base import BaseEstimator
+# from sklearn.exceptions import ConvergenceWarning
+# from sklearn.utils.validation import check_array, check_is_fitted
 
-#from ..base import SurvivalAnalysisMixin
-#from ..functions import StepFunction
-#from ..nonparametric import _compute_counts
-#from ..util import check_arrays_survival
-
+# from ..base import SurvivalAnalysisMixin
+# from ..functions import StepFunction
+# from ..nonparametric import _compute_counts
+# from ..util import check_arrays_survival
 
 
 class CoxPHOptimizer:
     """Negative partial log-likelihood of Cox proportional hazards model"""
 
-    def _init_(self, X, event, time, alpha, ties):
+    def __init__(self, X, event, time, alpha, ties):
         # sort descending
         o = numpy.argsort(-time, kind="mergesort")
-        self.x = torch.tensor(X[o, :],dtype=torch.float)
+        self.x = torch.tensor(X[o, :], dtype=torch.float)
         self.event = event[o]
         self.time = time[o]
         self.alpha = alpha
-#        self.no_alpha = numpy.all(self.alpha < numpy.finfo(self.alpha.dtype).eps)
+        self.no_alpha = numpy.all(
+            self.alpha < numpy.finfo(self.alpha.dtype).eps)
         if ties not in ("breslow", "efron"):
             raise ValueError("ties must be one of 'breslow', 'efron'")
         self._is_breslow = ties == "breslow"
+        self.hessian = None
+        self.gradient = None
 
     def nlog_likelihood(self, w):
         """Compute negative partial log-likelihood
@@ -80,12 +82,14 @@ class CoxPHOptimizer:
             if n_events > 0:
                 if breslow:
                     risk_set = risk_set + risk_set2
-                    loss = loss -  (numerator - n_events * torch.log(risk_set)) / n_samples
+                    loss = loss - (numerator - n_events *
+                                   torch.log(risk_set)) / n_samples
                 else:
                     numerator = numerator/n_events
                     for _ in range(n_events):
                         risk_set = risk_set + risk_set2 / n_events
-                        loss = loss - (numerator - torch.log(risk_set)) / n_samples
+                        loss = loss - \
+                            (numerator - torch.log(risk_set)) / n_samples
 
         # add regularization term to log-likelihood
 #        return loss + torch.sum(self.alpha * torch.square(w)) / (2. * n_samples)
