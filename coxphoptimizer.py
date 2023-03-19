@@ -36,13 +36,14 @@ class CoxPHOptimizer:
         self.event = event[o]
         self.time = time[o]
         self.alpha = alpha
-        self.no_alpha = numpy.all(
-            self.alpha < numpy.finfo(self.alpha.dtype).eps)
+        # self.no_alpha = numpy.all(
+        #     self.alpha < numpy.finfo(self.alpha.dtype).eps)
         if ties not in ("breslow", "efron"):
             raise ValueError("ties must be one of 'breslow', 'efron'")
+        ties = "breslow"
         self._is_breslow = ties == "breslow"
-        self.hessian = None
-        self.gradient = None
+        # self.hessian = None
+        # self.gradient = None
 
     def nlog_likelihood(self, w):
         """Compute negative partial log-likelihood
