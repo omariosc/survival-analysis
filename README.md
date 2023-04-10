@@ -4,7 +4,7 @@ This repository contains the code for the future paper `Survival Analysis with N
 
 ## Summary
 
-In this project, we investigated using a range of different *neural network* models in statistical models to examine associations of *covariates* on the *survival time* of an inhomogeneous population of *chronic heart failure* patients for survival analysis. The project used clinical data from *1,802* heart failure patients in the *UK-HEART2* cohort. These neural networks were used within a *partial-likelihood* acting as a *loss function* to estimate whether a patient is more or less likely to survive than another. The best of the final produced models was the ~~*convolutional neural network*~~, which achieved a median *c-statistic* score of ~~***0.91***~~ compared to ***0.86*** using *latent class regression* (Mbotwa et al., 2021).
+In this project, we investigated using a range of different *neural network* models in statistical models to examine associations of *covariates* on the *survival time* of an inhomogeneous population of *chronic heart failure* patients for survival analysis. The project used clinical data from *1,802* heart failure patients in the *UK-HEART2* cohort. These neural networks were used within a *partial-likelihood* acting as a *loss function* to estimate whether a patient is more or less likely to survive than another. The best of the final produced models achieved a median *c-statistic* score of ~~***0.91***~~ compared to ***0.86*** using *latent class regression* (Mbotwa et al., 2021).
 
 ## Introduction
 
@@ -16,7 +16,7 @@ Neural networks can be used in survival analysis to model the relationship betwe
 
 A neural network can learn non-linear relationships between predictors and the outcome and manage substantial amounts of data with many predictors. This makes it a powerful tool for survival analysis, where traditional statistical methods may struggle to model complex relationships.
 
-This project uses a range of different neural networks within a *partial-likelihood estimate* on a dataset containing information on *chronic heart failure* patients to predict if a patient is more or less likely to survive than another. This included *simple neural networks*, *generative adversarial neural networks*, *convolutional neural networks*, and *mixture modelling*. The aim is to see if neural networks, given their non-parametric and non-linear nature, can identify patterns and make predictions that traditional techniques cannot in the context of survival analysis.
+This project explores using neural networks within a *partial-likelihood estimate* on a dataset containing information on *chronic heart failure* patients to predict if a patient is more or less likely to survive than another. The aim is to see if neural networks, given their non-parametric and non-linear nature, can identify patterns and make predictions that traditional techniques cannot in the context of survival analysis.
 
 ## Requirements Specification
 
