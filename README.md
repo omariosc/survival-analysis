@@ -14,7 +14,7 @@ A neural network is a machine learning model inspired by the structure and funct
 
 Neural networks can be used in survival analysis to model the relationship between various covariates (such as medical history, whether one has diabetes and treatment details, including the value of haemoglobin in one’s blood) and the time of an event of interest (such as death). A neural network can learn non-linear relationships between predictors and the outcome and manage substantial amounts of data with many predictors. This makes it a powerful tool for survival analysis, where traditional statistical methods may struggle to model complex relationships.
 
-This project explores using neural networks models to examine associates of covariates from clinical data of an inhomogeneous population on chronic heart failure patients to predict if a patient is more or less likely to survive than another. The aim is to see if neural networks, given their non-parametric and non-linear nature, can identify patterns and make predictions that traditional techniques cannot in the context of survival analysis.
+This project explores using neural network models to examine associates of covariates from clinical data of an inhomogeneous population on chronic heart failure patients to predict if a patient is more or less likely to survive than another. The aim is to see if neural networks, given their non-parametric and non-linear nature, can identify patterns and make predictions that traditional techniques cannot in the context of survival analysis.
 
 ## Requirements Specification
 
