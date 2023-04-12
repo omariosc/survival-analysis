@@ -19,7 +19,7 @@ This project explores using neural networks models to examine associates of cova
 ## Requirements Specification
 
 1. Process and understand the UK-HEART2 dataset on CHF patients.
-2. Use traditional statistical methods to obtain coefficients of patient data (_covariates_)  which affects survivability.
+2. Use traditional statistical methods to obtain coefficients of patient data (_covariates_)  which affect survivability.
 3. Create a NN implementation of estimating weights of covariates.
 4. Create a _loss function_ for the neural network (to evaluate the performance by measuring how well the NN can make predictions)
 5. Investigate and explore different NN models and their properties for capturing the relationship of patient data.
