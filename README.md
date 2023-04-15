@@ -4,7 +4,7 @@ This repository contains the code for the future paper `Survival Analysis with N
 
 ## Summary
 
-In this project, we investigated using a range of different neural network models in statistical models to examine associations of covariates from clinical data of an inhomogeneous population of 1,802 chronic heart failure patients in the UK-HEART2 cohort for survival analysis. These neural networks were used within a partial-likelihood acting as a loss function in reimplementing the Cox Proportional-Hazards Optimizer in scikit-survival combined with CoxNNet (Ching et al., 2018) to estimate the coefficients of covariates and which of a pair of patients is more likely to survive than the other. The best of the final produced models achieved a median c-statistic score of 0.91 compared to 0.86 using latent class regression (Mbotwa et al., 2021) and 0.69 using standard Cox Proportional-Hazards regression (Mbotwa et al., 2021).
+In this project, we investigated using a range of different neural network models in statistical models to examine associations of covariates from clinical data of an inhomogeneous population of 1,802 chronic heart failure patients in the UK-HEART2 cohort for survival analysis. These neural networks were used within a partial-likelihood acting as a loss function in reimplementing the Cox Proportional-Hazards Optimizer in scikit-survival combined with CoxNNet (Ching et al., 2018) to estimate the coefficients of covariates and which of a pair of patients is more likely to survive than the other. The best of the final produced models achieved a median c-statistic score of 0.91 compared to 0.86 using latent class regression (Mbotwa et al., 2021) and 0.68 using standard Cox Proportional-Hazards regression (Mbotwa et al., 2021).
 
 ## Introduction
 
@@ -21,6 +21,6 @@ This project explores using neural network models to examine associates of covar
 1. Process and understand the UK-HEART2 dataset on CHF patients.
 2. Use traditional statistical methods to obtain coefficients of patient data (_covariates_)  which affect survivability.
 3. Create a NN implementation of estimating weights of covariates.
-4. Create a _loss function_ for the neural network (to evaluate the performance by measuring how well the NN can make predictions)
+4. Create a _loss function_ for the NN (to evaluate the performance by measuring how well it can make predictions)
 5. Investigate and explore different NN models and their properties for capturing the relationship of patient data.
 6. Evaluate the performance of the NN models using the _concordance statistic_ (how accurate the predictions were).
