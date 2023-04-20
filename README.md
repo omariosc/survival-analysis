@@ -15,12 +15,3 @@ A neural network is a machine learning model inspired by the structure and funct
 Neural networks can be used in survival analysis to model the relationship between various covariates (such as medical history, whether one has diabetes and treatment details, including the value of haemoglobin in one’s blood) and the time of an event of interest (such as death). A neural network can learn non-linear relationships between predictors and the outcome and manage substantial amounts of data with many predictors. This makes it a powerful tool for survival analysis, where traditional statistical methods may struggle to model complex relationships.
 
 This project explores using neural network models to examine associates of covariates from clinical data of an inhomogeneous population on chronic heart failure patients to predict if a patient is more or less likely to survive than another. The aim is to see if neural networks, given their non-parametric and non-linear nature, can identify patterns and make predictions that traditional techniques cannot in the context of survival analysis.
-
-## Requirements Specification
-
-1. Process and understand the UK-HEART2 dataset on CHF patients.
-2. Use traditional statistical methods to obtain coefficients of patient data (_covariates_)  which affect survivability.
-3. Create a NN implementation of estimating weights of covariates.
-4. Create a _loss function_ for the NN (to evaluate the performance by measuring how well it can make predictions)
-5. Investigate and explore different NN models and their properties for capturing the relationship of patient data.
-6. Evaluate the performance of the NN models using the _concordance statistic_ (how accurate the predictions were).
