@@ -4,7 +4,7 @@ This repository contains the code for the paper `Survival Analysis with Neural N
 
 ## Summary
 
-In this project, we investigated using a range of different neural network models in statistical models to examine associations of covariates from clinical data of an inhomogeneous population of 1,802 chronic heart failure patients in the UK-HEART2 cohort for survival analysis. These neural networks were used within a partial-likelihood acting as a loss function in reimplementing the Cox Proportional-Hazards Optimizer in scikit-survival combined with CoxNNet (Ching et al., 2018) to estimate the relationships of covariates and produce a risk score for a patient, given their covariates. The best final-produced models achieved a median c-statistic score of 0.71 compared to 0.86 using latent class regression (Mbotwa et al., 2021) and 0.68 using standard Cox Proportional-Hazards regression (Mbotwa et al., 2021).
+In this project, we investigated using a range of different neural network models in statistical models to examine associations of covariates from clinical data of an inhomogeneous population of 1,802 chronic heart failure patients in the UK-HEART2 cohort for survival analysis. These neural networks were used within a partial-likelihood acting as a loss function in reimplementing the Cox Proportional-Hazards Optimizer in scikit-survival combined with CoxNNet (Ching et al., 2018) to examine the relationships of covariates and estimate a risk score for a patient, given their covariates. The best final-produced models achieved a median c-statistic score of 0.71 compared to 0.86 using latent class regression (Mbotwa et al., 2021) and 0.68 using standard Cox Proportional-Hazards regression (Mbotwa et al., 2021).
 
 ## Introduction
 
