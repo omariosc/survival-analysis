@@ -4,9 +4,11 @@ This repository contains the code for the paper `Survival Analysis with Neural N
 
 ## Summary
 
-In this project, we investigated using a range of different neural network models in statistical models to examine associations of covariates from clinical data of an inhomogeneous population of 1,802 Chronic Heart Failure patients in the UK-HEART2 cohort for Survival Analysis. These neural networks were used within a partial-likelihood acting as a loss function in reimplementing the Cox Proportional-Hazards Optimizer in scikit-survival combined with CoxNNet (Ching et al., 2018) to examine the relationships of covariates and estimate a risk score for a patient, given their covariates. 
-We successfully reimplemented Latent Class Analysis using Gaussian Mixture Models with the KMeans algorithm and trained a neural network model for each class. The best of these models achieved a c-statistic score of 0.68 compared to 0.86 using Latent Class Regression (Mbotwa et al., 2021) and 0.68 using standard Cox Proportional-Hazards regression (Mbotwa et al., 2021).
-We extensively explored different neural network solutions by modifying the network architecture, parameters such as the learning rate and epochs, and completely different solutions using Convolutional Neural Networks in which we transformed patient data into an image where each pixel represented a covariate. The best of these models produced a c-statistic of 0.65.
+In this project, we investigated using a range of different neural network models in statistical models to examine associations of covariates from clinical data of an inhomogeneous population of 1,802 Chronic Heart Failure patients in the UK-HEART2 cohort for Survival Analysis. These neural networks were used within a partial-likelihood acting as a loss function in reimplementing the Cox Proportional-Hazards Optimizer in scikit-survival combined with CoxNNet (Ching et al., 2018) to examine the relationships of covariates and estimate a risk score for a patient, given their covariates.
+
+We successfully reimplemented Latent Class Analysis using Gaussian Mixture Models with the KMeans algorithm and trained a neural network model for each class. The best of these models achieved a c-statistic score of 0.68 using 4 subgroups compared to 0.84 using Latent Class Regression (Mbotwa et al., 2021) and 0.68 using standard Cox Proportional-Hazards regression (Mbotwa et al., 2021).
+
+We extensively explored different neural network solutions by modifying the network architecture, parameters such as the learning rate and epochs, and completely different solutions using Convolutional Neural Networks in which we transformed patient data into an image where each pixel represented a covariate.
 
 ## Introduction
 
